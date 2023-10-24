@@ -1,0 +1,23 @@
+.conteiner{
+  background-color: black;
+  margin:30px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 3px 5px white;
+  display: flexbox; 
+  align-items: center; 
+  justify-content: center;
+  gap: 15%;
+  text-align: center;
+  user-select: none;
+  max-width: 400px;
+  min-width: 400px;
+  
+}
+
+
+img{
+  width: 320px;
+  height: 340px;
+  
+}
