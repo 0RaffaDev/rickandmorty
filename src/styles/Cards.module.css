@@ -1,8 +1,6 @@
 .conteiner{
    display: flex;
    margin: 10px;
-    background-image: url(https://www.freepnglogos.com/uploads/rick-and-morty/rick-and-morty-background-rick-morty-wallpaper-speedpaint-youtube-2.jpg);
-    background-repeat: round;
     flex-wrap: wrap;
 }
 

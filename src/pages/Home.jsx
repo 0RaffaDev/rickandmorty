@@ -1,13 +1,9 @@
-import './App.css'
-
+import NavBar from "../components/NavBar"
+import Cards from "../components/Cards"
 import {useState} from 'react';
 import axios from 'axios' 
-import {Routes, Route} from 'react-router-dom'
-import About from './pages/About'
-import Home from './pages/Home';
-
-const App = () => {
-  
+const Home = ()=>{
+    
  const [characters, setCharacters] = useState([]);
  
 
@@ -28,13 +24,12 @@ const onClose = (id) =>{
     characters.filter((char) => {return char.id !== Number(id)})
   )
 }
-
-  return (
-      <Routes>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/home' element={<Home/>}/>
-      </Routes>
-  )
+    return(
+        
+        <div >
+            <NavBar onSearch={onSearch}/>
+            <Cards characters={characters} onClose={onClose} />
+        </div>
+    )
 }
-
-export default App;
+export default Home
