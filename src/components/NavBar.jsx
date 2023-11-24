@@ -6,9 +6,12 @@ import { NavLink } from 'react-router-dom'
 const NavBar = ({onSearch})=>{
     return(
     <div className={style.conteiner}>
-       <NavLink to='/'> <button>HOME</button></NavLink>
-       <NavLink to='/About'><button>ABOUT</button></NavLink>
+       <button><NavLink to='/home' style={({isActive}) => isActive ? {color: 'coral'} : {color: 'white'}}>HOME</NavLink></button>
 
+       <button><NavLink to='/About' style={({isActive}) => isActive ? {color: 'coral'} : {color: 'white'}}>ABOUT</NavLink></button>
+       <button><NavLink to='/' style={({isActive}) => isActive ? {color: 'coral'} : {color: 'white'}}>LOG OUT</NavLink></button>
+
+     
         <SearchBar onSearch={onSearch} />
         
     </div>

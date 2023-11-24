@@ -26,7 +26,6 @@ const Detail = ()=>{
      }, [id]);
     return(
       <div>
-         <NavBar/>
 
       <center>
         <div className={style.conteiner}>
