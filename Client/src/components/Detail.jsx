@@ -13,7 +13,7 @@ const Detail = ()=>{
 
    
     useEffect(() => {
-        axios(`https://rym2.up.railway.app/api/character/${id}?key=pi-0raffadev`).then(
+        axios(`http://localhost:3001/rickandmorty/character/${id}`).then(
            ({ data }) => {
               if (data.name) {
                  setCharacter(data);
