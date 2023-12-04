@@ -8,7 +8,7 @@ const NavBar = ({onSearch})=>{
     <div className={style.conteiner}>
        <button><NavLink to='/home' style={({isActive}) => isActive ? {color: 'coral'} : {color: 'white'}}>HOME</NavLink></button>
 
-       <button><NavLink to='/About' style={({isActive}) => isActive ? {color: 'coral'} : {color: 'white'}}>ABOUT</NavLink></button>
+       <button><NavLink to='/About' style={({isActive}) => isActive ? {color: 'coral'} : {color: 'white'}}>ABOUTgit </NavLink></button>
        <button><NavLink to='/' style={({isActive}) => isActive ? {color: 'coral'} : {color: 'white'}}>LOG OUT</NavLink></button>
 
      
