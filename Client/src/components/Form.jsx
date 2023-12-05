@@ -1,6 +1,6 @@
 
 import {Link } from 'react-router-dom';
-import login from '../img/7dxS.gif';
+import iconlogin from '../img/7dxS.gif';
 import { useState } from 'react';
 import perfil from '../img/kisspng-rick-sanchez-youtube-meeseeks-and-destroy-pickle-r-rick-and-morty-5ac21f3eb26695.6388095615226714227307.png'
 import validation from '../utils/validation'
@@ -8,7 +8,11 @@ const Form = (props)=>{
 
     const [userData, setUserData] = useState({email: "", password: ""})
     const [errors, setErrors] = useState({email: "Ingrese su email", password: "Ingrese su contraseña"})
-
+    const handleSubmit = event =>{
+        event.preventDefault();
+        props.login(userData);
+    }
+        
     
     const handleChange = (event) => {
         const {name, value} = event.target;
@@ -25,7 +29,7 @@ const Form = (props)=>{
 
         <div>
             <center>
-            <form style={{
+            <form onSubmit={handleSubmit} style={{
       height  : '700px'
     , width: '300px'
     , backgroundColor: 'rgba(0,0,0,0.7)'
@@ -75,14 +79,13 @@ const Form = (props)=>{
                 <p style={{color: 'coral',  }}>{errors.password ? errors.password : null}</p>
 
 
-
-                    <Link to='/home'> 
+ 
                         <button type='submit' disabled={errors.email || errors.password}> 
                             <img
-                            src={login}  style={{width:'120px', height: '120px', } }
+                            src={iconlogin}  style={{width:'120px', height: '120px', } }
                             ></img>
                   <br />
-                  SUBMIT</button></Link>
+                  SUBMIT</button>
                 
                  
 
