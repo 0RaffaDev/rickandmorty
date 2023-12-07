@@ -4,7 +4,7 @@ import {useState} from 'react';
 import axios from 'axios' 
 
 
-const Home = ()=>{
+const Home = (props)=>{
  
     
  const [characters, setCharacters] = useState([]);
@@ -30,7 +30,7 @@ const onClose = (id) =>{
     return(
         
         <div >
-            <NavBar onSearch={onSearch}/> 
+            <NavBar onSearch={onSearch} logout={props.logout}/> 
             <Cards characters={characters} onClose={onClose} />
         </div>
     )

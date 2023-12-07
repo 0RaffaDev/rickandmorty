@@ -22,10 +22,14 @@ const App = () => {
   if(userData.password === PASSWORD && userData.email === EMAIL){
     setAccess(true);
     navigate('/home');
-      
-
-
  }
+ else{
+   alert("SU NOMBRE DE USUARIO O CONTRASEÑA ES INCORRECTO")
+ }
+  }
+
+  function logout() {
+    setAccess(false)
   }
   useEffect(()=>{
     !access && navigate('/');
@@ -35,11 +39,11 @@ const App = () => {
   return (
 
    <div>
-     {location.pathname !== '/home' && location.pathname !== '/' ? <NavBar/> : null}
+     {location.pathname !== '/home' && location.pathname !== '/' ? <NavBar logout={logout}/> : null}
 
       <Routes>
         <Route path='/' element={<Form login={login}/>}/>
-        <Route path='/home' element={<Home/>}/>
+        <Route path='/home' element={<Home logout={logout}/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/detail/:id' element={<Detail />}/>
         <Route path='*' element={<Error/>}/>
